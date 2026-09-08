@@ -1,3 +1,5 @@
+using CadastroAnimaisExercicio.Entidades;
+
 namespace CadastroAnimaisExercicio;
 
 public class Aplicacao
@@ -53,7 +55,12 @@ public class Aplicacao
 
     private static void CadastrarAnimal()
     {
-        // TODO: implementar a opção 1.
+        var Nome = LerTexto("Digite o nome do animal: ");
+        var Especie = LerTexto("Digite a espécie do animal: ");
+        var Idade = LerInteiro("Digite a idade do animal: ");
+
+        var animal = new Animal(Nome, Especie, Idade);
+        animal.ExibirDados();
     }
 
     private static void ListarAnimais()
